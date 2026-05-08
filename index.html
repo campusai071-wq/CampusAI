@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CampusAI.ng | Official 2026 JAMB News & AI Admission Logic</title>
+    
+    <!-- PWA / Mobile App Capabilities -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="CampusAI">
+    <meta name="theme-color" content="#1e3a8a">
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- SEO Moat: Authority Meta Tags -->
+    <meta name="google-site-verification" content="n07lx2H6ou5qr0uS9BwlEYwX-27Jt2E27QYnJpD0jHQ" />
+    <meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE_HERE" />
+    <meta name="yandex-verification" content="YOUR_YANDEX_VERIFICATION_CODE_HERE" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="description" content="The official Nigerian higher education companion. CampusAI.ng provides 100% verified 2026 JAMB registration news, institutional aggregate calculators, and AI-powered admission guidance.">
+    <meta name="keywords" content="cutoff mark calculator, JAMB 2026 registration, official JAMB news, CBT centers 2026, university cutoff marks, UNILAG aggregate calculator, FUTA cutoff mark, Nigerian admission AI, Post-UTME 2026 updates, original campusai">
+    <meta name="author" content="Emmanuel Iweh">
+    <link rel="canonical" href="https://campusai.ng/" />
+    
+    <!-- Open Graph / Brand Protection -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://campusai.ng/">
+    <meta property="og:title" content="CampusAI.ng - Official 2026 Admission Intelligence">
+    <meta property="og:description" content="Calculate aggregate scores, find accredited CBT centers, and get the latest JAMB news instantly. The original AI assistant for Nigerian students.">
+    <meta property="og:image" content="https://campusai.ng/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- JSON-LD: The SEO Moat for Google Search Dominance -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "CampusAI.ng",
+      "url": "https://campusai.ng/",
+      "description": "AI-powered admission guidance and aggregate calculator for Nigerian university candidates.",
+      "applicationCategory": "EducationApplication",
+      "operatingSystem": "All",
+      "author": {
+        "@type": "Person",
+        "name": "Emmanuel Iweh"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "NGN"
+      }
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%232563eb%22/><path d=%22M25 40 L50 20 L75 40 L50 60 Z%22 fill=%22white%22/><path d=%22M35 45 L35 65 C35 65 50 72 65 65 L65 45%22 fill=%22none%22 stroke=%22white%22 stroke-width=%225%22/></svg>">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        scroll-behavior: smooth;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+      }
+      input, textarea {
+        -webkit-user-select: text;
+        user-select: text;
+      }
+      .gradient-bg {
+        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #10b981 100%);
+        background-size: 200% 200%;
+        animation: gradient-animation 15s ease infinite;
+      }
+      @keyframes gradient-animation {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      .ticker-wrap {
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+      }
+      .ticker-content {
+        display: inline-flex;
+        animation: ticker 60s linear infinite;
+        padding-left: 0;
+      }
+      @keyframes ticker {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+
+      .dark ::-webkit-scrollbar {
+        width: 10px;
+      }
+      .dark ::-webkit-scrollbar-track {
+        background: #111827;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #374151;
+        border-radius: 5px;
+      }
+      .dark ::-webkit-scrollbar-thumb:hover {
+        background: #4b5563;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.39.0",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "framer-motion": "https://esm.sh/framer-motion@^12.30.0",
+    "flutterwave-react-v3": "https://esm.sh/flutterwave-react-v3@^1.3.2"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-50 text-gray-900 transition-colors duration-300 antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>

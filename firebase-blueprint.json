@@ -1,0 +1,83 @@
+{
+  "entities": {
+    "NewsItem": {
+      "title": "News Item",
+      "description": "A news article or intelligence report.",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "category": { "type": "string" },
+        "date": { "type": "string" },
+        "excerpt": { "type": "string" },
+        "fullContent": { "type": "string" },
+        "slug": { "type": "string" },
+        "isLive": { "type": "boolean" },
+        "sourceUrl": { "type": "string" }
+      },
+      "required": ["title", "category", "date", "excerpt", "fullContent", "slug"]
+    },
+    "GlobalConfig": {
+      "title": "Global Configuration",
+      "description": "Global settings for the application.",
+      "type": "object",
+      "properties": {
+        "whatsapp": { "type": "string" },
+        "supportEmail": { "type": "string" },
+        "socials": { "type": "object" },
+        "googleAdsEnabled": { "type": "boolean" },
+        "flutterwaveKey": { "type": "string" },
+        "geminiKey": { "type": "string" },
+        "featureKeys": { "type": "object" },
+        "seo": { "type": "object" },
+        "faqs": { "type": "array" }
+      }
+    },
+    "Feedback": {
+      "title": "Student Feedback",
+      "description": "Feedback shared by students about their journey.",
+      "type": "object",
+      "properties": {
+        "feedback": { "type": "string" },
+        "rating": { "type": "number" },
+        "userId": { "type": "string" },
+        "email": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" }
+      },
+      "required": ["feedback", "rating", "timestamp"]
+    },
+    "InstitutionalLogic": {
+      "title": "Institutional Scoring Logic",
+      "description": "Scoring system logic for a specific university.",
+      "type": "object",
+      "properties": {
+        "hasJamb": { "type": "boolean" },
+        "hasPostUtme": { "type": "boolean" },
+        "hasOLevel": { "type": "boolean" },
+        "explanation": { "type": "string" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      }
+    }
+  },
+  "firestore": {
+    "/news/{newsId}": {
+      "schema": "NewsItem",
+      "description": "Collection of admission intelligence reports."
+    },
+    "/settings/global": {
+      "schema": "GlobalConfig",
+      "description": "Global application settings."
+    },
+    "/settings/ticker": {
+      "schema": { "type": "object", "properties": { "headlines": { "type": "array", "items": { "type": "string" } } } },
+      "description": "Ticker headlines."
+    },
+    "/feedback/{feedbackId}": {
+      "schema": "Feedback",
+      "description": "Student feedback and journey stories."
+    },
+    "/institutional_logic/{slug}": {
+      "schema": "InstitutionalLogic",
+      "description": "Cached scoring system logic for universities."
+    }
+  }
+}
